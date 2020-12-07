@@ -1,0 +1,24 @@
+﻿@page
+@model epsi.app.Pages.EtudiantsModel
+@{
+    ViewData["Title"] = "liste étudiants";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Etudiants)
+        {
+            <tr>
+                <td>@item.Nom</td>
+                <td>@item.Prenom</td>
+            </tr>
+        }
+    </tbody>
+</table>
